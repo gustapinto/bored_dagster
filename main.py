@@ -1,7 +1,4 @@
-from tasks.job import ingest_boredapi
-
-
-from tasks.job import ingest_boredapi
+from src.tasks.boredapi.job import ingest_boredapi
 
 
 def main() -> None:

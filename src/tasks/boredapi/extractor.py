@@ -3,6 +3,7 @@ from time import sleep
 from dagster import op
 from requests import get
 
+
 @op
 def extract_boredapi() -> list:
     ENDPOINT = 'https://www.boredapi.com/api/activity'
