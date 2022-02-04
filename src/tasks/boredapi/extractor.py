@@ -14,6 +14,5 @@ def extract_boredapi() -> list:
 
     for _ in range(0, TOTAL, LIMIT):
         data.extend([get(ENDPOINT).json() for _ in range(LIMIT)])
-        sleep(2)
 
     return data
