@@ -1,7 +1,7 @@
-from src.jobs.boredapi import ingest_boredapi
+from tasks.job import ingest_boredapi
 
 
-from src.jobs.boredapi import ingest_boredapi
+from tasks.job import ingest_boredapi
 
 
 def main() -> None:

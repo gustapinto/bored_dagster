@@ -1,6 +1,6 @@
 from dagster import job
 
-from src.extractors.boredapi import extract_boredapi
+from tasks.extractor import extract_boredapi
 
 @job
 def ingest_boredapi() -> None:
