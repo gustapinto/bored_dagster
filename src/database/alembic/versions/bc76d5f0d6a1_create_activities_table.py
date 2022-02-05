@@ -6,7 +6,7 @@ Create Date: 2022-02-05 11:56:12.435675
 
 """
 from alembic import op
-import sqlalchemy as sa
+from sqlalchemy import Column, Integer, String, SmallInteger, DECIMAL
 
 
 # revision identifiers, used by Alembic.
@@ -19,11 +19,11 @@ depends_on = None
 def upgrade():
     op.create_table(
         'activities',
-        sa.Column('id', sa.Integer, sa.Identity(), primary_key=True),
-        sa.Column('name', sa.String(100), nullable=False),
-        sa.Column('kind', sa.String(50), nullable=False),
-        sa.Column('participants', sa.SmallInteger, nullable=False),
-        sa.Column('price', sa.DECIMAL(2), nullable=False)
+        Column('id', Integer, primary_key=True),
+        Column('name', String(100), nullable=False),
+        Column('kind', String(50), nullable=False),
+        Column('participants', SmallInteger, nullable=False),
+        Column('price', DECIMAL(2), nullable=False)
     )
 
 
