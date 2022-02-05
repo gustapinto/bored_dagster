@@ -6,10 +6,10 @@ def parse_boredapi(raw_data: list) -> list:
     data = []
 
     for d in raw_data:
-        activity = d['activity'] or ''
+        activity = d['activity'].replace("'", "") or ''
         kind = d['type'] or ''
-        participants = d['participants'] or 0
-        price = d['price'] or 0.0
+        participants = d['participants']
+        price = round(d['price'], 2)
 
         data.append({
             'activity': f"'{activity}'",

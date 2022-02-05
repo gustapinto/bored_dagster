@@ -4,4 +4,4 @@ WORKDIR /boreddagster
 
 COPY ./requirements.txt /boreddagster/requirements.txt
 
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
