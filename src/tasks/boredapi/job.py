@@ -1,9 +1,8 @@
 from dagster import job
-from humanfriendly import parse_date
 
-from .parser import parse_boredapi
-from .extractor import extract_boredapi
-from .loader import load_boredapi
+from src.tasks.boredapi.parser import parse_boredapi
+from src.tasks.boredapi.extractor import extract_boredapi
+from src.tasks.boredapi.loader import load_boredapi
 
 
 @job

@@ -4,9 +4,12 @@ services:
   python:
     build: .
     tty: true
+    command: /bin/sh "dagit.sh"
     working_dir: /boreddagster
     volumes:
       - ./:/boreddagster:Z
+    ports:
+      - 3000:3000
     depends_on:
       - postgres
     env_file:
